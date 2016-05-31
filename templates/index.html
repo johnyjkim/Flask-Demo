@@ -1,15 +1,31 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Hello, World!</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div>
-  			<h1>Hello, World!</h1>
-		</div>
-	</body>
-</html>
+<title>Plotting stock prices</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <div class=page>
+        <h1>Plotting stock prices</h1>
+        <div class=metanav>
+            
+            <h4>
+                Please enter a ticker name (e.g. GOOG).
+            </h4>
+            
+            <form id='userinfoform' method='post' action='index' > <!-- action is the URL you want to move to next-->
+                <p>
+                Ticker Name: <input type='text' name='ticker' />
+                </p>
+                
+                <p>
+                <input type='checkbox' name='open' /> Opening price <br>
+                <input type='checkbox' name='close' /> Closing price <br>
+                <input type='checkbox' name='adjopen' /> Adjusted opening price <br>
+                <input type='checkbox' name='adjclose' /> Adjusted closing price <br>
+                </p>
+
+                <p>
+                <input type='submit' value='Submit' /> <!-- value is the text that will appear on the button. -->
+                </p>
+            </form>
+            
+        </div>
+    </div>
+

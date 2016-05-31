@@ -1,0 +1,1 @@
+url: https://www.quandl.com/api/v3/datasets/WIKI/AMZN.csv
